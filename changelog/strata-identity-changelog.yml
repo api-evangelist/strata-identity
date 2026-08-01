@@ -1,0 +1,57 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.strata.io/changelog
+scheme: calver
+format: vYYYY.MM.patch
+streams:
+- name: Orchestrator
+  url: https://docs.strata.io/changelog/orchestrator/2026
+  current: v2026.07.2
+- name: Console
+  url: https://docs.strata.io/changelog/console/2026
+entries:
+- version: v2026.07.2
+  date: '2026-07-17'
+  stream: Orchestrator
+  breaking: false
+  highlights:
+  - Authenticate Service Extension gains idfabric.WithForceAuthentication() (SAML sends ForceAuthn="true")
+  - MCP Proxy adds OPA-based tool-listing control via a new listing authorization block
+- version: v2026.07.1
+  date: '2026-07-14'
+  stream: Orchestrator
+  breaking: false
+  highlights:
+  - "Experimental: Client ID Metadata Documents (CIMD) - URL-based dynamic OAuth client registration for AI agents/MCP clients"
+  - Resolved security issues
+- version: v2026.06.5
+  date: '2026-07-01'
+  stream: Orchestrator
+  breaking: true
+  highlights:
+  - Hardened encryption of Redis-cached values; on-disk cache format changed
+  - OIDC refresh tokens issued before upgrade are invalidated; machine-to-machine clients may need to re-authenticate once
+- version: v2026.06.3
+  date: '2026-06-18'
+  stream: Orchestrator
+  breaking: false
+  highlights:
+  - MCP Proxy connection-authorization OPA policy filters upstream MCP tools by access token
+- date: '2026-07-16'
+  stream: Console
+  breaking: true
+  highlights:
+  - Eval-only Maverics Storage removed; use a supported config storage provider
+  - SAML Provider key config now accepts a single key; key reordering removed
+- date: '2026-07-14'
+  stream: Console
+  breaking: false
+  highlights:
+  - OIDC provider private keys respect configured ordering (enables key rotation)
+  - Rubrik Terms of Service / Privacy Policy acceptance prompt added after Strata joined Rubrik
+- date: '2026-07-06'
+  stream: Console
+  breaking: false
+  highlights:
+  - Claim/attribute mapping fields accept free-text input
+  - "Removed 'Log in with Microsoft' social sign-in option"

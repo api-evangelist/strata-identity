@@ -1,0 +1,63 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.strata.io/reference/console/api-clients
+docs: https://docs.strata.io/reference/console/api-clients
+notes: >-
+  Auth profile for the Maverics Console public management API. Strata publishes no
+  machine-readable OpenAPI for this API, so this profile is captured from the docs
+  and the live regional OpenID Connect discovery documents rather than derived from
+  a spec. API clients are confidential OAuth 2.0 clients using the client-credentials
+  grant with private_key_jwt (JWT client assertion) authentication.
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - clientCredentials
+  client_auth_methods:
+  - private_key_jwt
+  assertion_alg: ES256
+schemes:
+- name: MavericsConsoleOAuth2
+  type: oauth2
+  flow: clientCredentials
+  grant: client_credentials
+  client_authentication: private_key_jwt
+  assertion:
+    spec: RFC 7523 (JWT client assertion)
+    signing_alg: ES256
+    header: {alg: ES256, typ: JWT}
+    claims:
+      iss: client ID
+      sub: must equal iss (the client ID)
+      aud: the region token endpoint URL
+      exp: future expiry timestamp
+  discovery:
+    method: OpenID Connect discovery
+    us: https://auth.us-east-2.strata.io/.well-known/openid-configuration
+    uk: https://auth.eu-west-2.strata.io/.well-known/openid-configuration
+  token_endpoint_us: https://auth.us-east-2.strata.io/oauth2/token
+  grant_types_supported:
+  - authorization_code
+  - refresh_token
+  - client_credentials
+  - password
+  - implicit
+  - urn:ietf:params:oauth:grant-type:token-exchange
+  scopes_supported:
+  - openid
+  - profile
+  - email
+  - phone
+  - offline_access
+identity_orchestration:
+  note: >-
+    Separately, the Maverics Orchestrator federates end-user auth to any upstream
+    identity provider via its Identity Fabric connectors (SAML, OIDC, LDAP, Active
+    Directory, OAuth). These are the auth protocols the product brokers for
+    protected applications, distinct from the Console API's own client auth above.
+  protocols:
+  - SAML 2.0
+  - OpenID Connect
+  - OAuth 2.0
+  - LDAP
+  - Active Directory

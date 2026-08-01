@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.strata.io/ + https://trust.strata.io/
+notes: >-
+  Standards Strata's Maverics platform conforms to, asserted from published docs
+  (Identity Fabric connectors, Console API auth, AI Identity Gateway) and the
+  SafeBase trust center. Strata's CEO co-authored SAML and the company authored
+  the IDQL policy language and the open-source Hexa project.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: Console API clients use OAuth 2.0 client-credentials (RFC 6749 sec 4.4); Orchestrator brokers OAuth
+- id: oidc
+  conforms: true
+  evidence: Live OpenID Connect discovery documents at regional auth hosts; OIDC Provider + connector modes
+- id: saml2
+  conforms: true
+  evidence: SAML Provider mode and SAML Identity Fabric connectors; CEO co-authored the SAML standard
+- id: rfc7523-jwt-client-assertion
+  conforms: true
+  evidence: API clients authenticate with private_key_jwt JWT client assertions (ES256)
+- id: rfc8693-token-exchange
+  conforms: true
+  evidence: grant_types_supported includes urn:ietf:params:oauth:grant-type:token-exchange (token brokering)
+- id: oauth-dpop
+  conforms: true
+  evidence: dpop_signing_alg_values_supported advertised in OIDC discovery
+- id: ldap
+  conforms: true
+  evidence: LDAP Provider mode and LDAP Identity Fabric authentication/attribute connectors
+- id: scim
+  conforms: false
+  evidence: no SCIM provisioning surface documented
+- id: fapi
+  conforms: false
+  evidence: no FAPI conformance claim published
+compliance_programs:
+- SOC 2 Type 2
+- ISO/IEC 27001:2022
+- CSA STAR Level 1
+- Cyber Essentials
+- GDPR
+compliance_source: https://trust.strata.io/

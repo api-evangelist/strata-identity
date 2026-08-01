@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of Strata Identity regional auth hosts + apis.yml/website hosts
+notes: >-
+  Strata's public marketing/docs hosts (strata.io, www.strata.io, docs.strata.io)
+  expose no /.well-known/ discovery documents. The Maverics platform's regional
+  authorization servers publish real OpenID Connect discovery + JWKS documents,
+  used by Console API clients to discover the token endpoint (RFC 8414 style
+  discovery via OIDC). No security.txt, oauth-authorization-server, api-catalog,
+  or ai-plugin.json were served on any probed host.
+hosts:
+- host: https://auth.us-east-2.strata.io
+  region: us-east-2
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: strata-identity-us-openid-configuration.json
+  - path: /.well-known/jwks.json
+    status: 200
+    file: strata-identity-us-jwks.json
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+- host: https://auth.eu-west-2.strata.io
+  region: eu-west-2
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: strata-identity-eu-openid-configuration.json
+- host: https://www.strata.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+- host: https://docs.strata.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 404

@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/strata-io
+notes: >-
+  Strata ships no traditional API client SDKs (npm/PyPI/etc.) for the Console
+  management API. Its first-party developer libraries are the Go Service Extension
+  SDK (interfaces + examples for building custom auth/authorization hooks that run
+  in the Orchestrator's embedded Go runtime) and the official Maverics Helm charts.
+packages:
+- language: go
+  registry: go-modules
+  name: github.com/strata-io/service-extension
+  url: https://github.com/strata-io/service-extension
+  install: go get github.com/strata-io/service-extension
+  official: true
+  license: MIT
+  description: >-
+    Orchestrator Service Extension interfaces and examples for building custom
+    authentication and authorization flows (embedded Go runtime, 30+ hook points).
+- language: helm
+  registry: github
+  name: strata-io/helm-charts
+  url: https://github.com/strata-io/helm-charts
+  install: helm repo add strata https://strata-io.github.io/helm-charts
+  official: true
+  license: MIT
+  description: Official Helm charts for deploying the Maverics Orchestrator on Kubernetes.

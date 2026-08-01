@@ -1,8 +1,20 @@
 aid: strata-identity
 name: Strata Identity
-description: Strata Identity is a company surfaced as a portfolio company of menlo-ventures and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Strata Identity is a multi-cloud identity orchestration and agentic AI security
+  company whose Maverics platform lets organizations unify authentication and
+  authorization across multiple clouds, identity providers, and applications, and
+  govern AI agent access at runtime, without rewriting apps or consolidating identity
+  providers. The platform pairs the Maverics Orchestrator, a lightweight identity
+  abstraction layer that routes auth between apps and any IdP (SAML, OIDC, LDAP,
+  Active Directory), with a hosted Maverics Console for visual configuration,
+  policy, and lifecycle management. It adds SSO, MFA, and authorization policy to
+  legacy and modern apps, provides identity continuity during IdP outages, and now
+  secures MCP servers and AI agents through an AI Identity Gateway. The Console
+  exposes a public management API automated with OAuth 2.0 client-credentials
+  clients. Founded by CEO Eric Olden, co-author of the SAML standard and creator of
+  the Identity Query Language (IDQL) and the open-source Hexa project; Strata is now
+  part of Rubrik.
 url: https://raw.githubusercontent.com/api-evangelist/strata-identity/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +22,58 @@ x-backed-by:
 - menlo-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.strata.io/wp-content/uploads/2025/07/Strata_Preview_Agentic.jpg
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Identity
+- Identity Orchestration
+- Authentication
+- Authorization
+- Single Sign-On
+- IAM
+- OAuth
+- SAML
+- OpenID Connect
+- AI Identity
+- Security
+apis:
+- name: Maverics Console Management API
+  description: >-
+    Public management API for the Maverics platform, automated with confidential
+    OAuth 2.0 client-credentials API clients (private_key_jwt / JWT client
+    assertion, ES256). Region-specific auth surfaces are discovered via OpenID
+    Connect discovery documents (US: auth.us-east-2.strata.io, UK: auth.eu-west-2.strata.io).
+  humanURL: https://docs.strata.io/reference/console/api-clients
+  baseURL: https://auth.us-east-2.strata.io
+  tags:
+  - Identity
+  - Authentication
+  - OAuth
+  properties:
+  - type: Authentication
+    url: authentication/strata-identity-authentication.yml
+  - type: WellKnown
+    url: well-known/strata-identity-well-known.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,3 +82,53 @@ maintainers:
 common:
 - type: Website
   url: https://strata.io
+- type: DeveloperPortal
+  url: https://docs.strata.io/
+- type: Documentation
+  url: https://docs.strata.io/
+- type: APIReference
+  url: https://docs.strata.io/reference/console/api-clients
+- type: GettingStarted
+  url: https://docs.strata.io/guides/getting-started/quick-start
+- type: Support
+  url: https://www.strata.io/contact/
+- type: Blog
+  url: https://www.strata.io/blog/
+- type: GitHubOrganization
+  url: https://github.com/strata-io
+- type: StatusPage
+  url: https://status.strata.io/
+- type: TermsOfService
+  url: https://www.rubrik.com/legal/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.strata.io/privacy-policy/
+- type: TrustCenter
+  url: https://trust.strata.io/
+- type: Compliance
+  url: https://trust.strata.io/
+- type: Security
+  url: https://trust.strata.io/
+- type: ChangeLog
+  url: https://docs.strata.io/changelog
+- type: LLMsTxt
+  url: llms/strata-identity-llms.txt
+- type: Packages
+  url: packages/strata-identity-packages.yml
+- type: SDKs
+  url: packages/strata-identity-packages.yml
+- type: Authentication
+  url: authentication/strata-identity-authentication.yml
+- type: WellKnown
+  url: well-known/strata-identity-well-known.yml
+- type: Conformance
+  url: conformance/strata-identity-conformance.yml
+- type: Lifecycle
+  url: lifecycle/strata-identity-lifecycle.yml
+- type: ChangeLog
+  url: changelog/strata-identity-changelog.yml
+  name: Changelog artifact
+- type: TrustCenter
+  url: security/strata-identity-trust-center.yml
+  name: Trust center artifact
+- type: DomainSecurity
+  url: security/strata-identity-domain-security.yml

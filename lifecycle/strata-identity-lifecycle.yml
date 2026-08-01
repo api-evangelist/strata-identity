@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.strata.io/changelog + https://status.strata.io/
+versioning:
+  scheme: calver
+  format: vYYYY.MM.patch
+  current_orchestrator: v2026.07.2
+  current_console: rolling
+  streams:
+  - Orchestrator
+  - Console
+  docs: https://docs.strata.io/changelog
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: >-
+    No formal RFC 8594 Sunset/Deprecation-header policy is published. Breaking
+    changes are announced per-release in the dated changelog (e.g. removal of the
+    eval-only Maverics Storage, removal of "Log in with Microsoft" social sign-in),
+    with upgrade guidance and impact notes.
+sla:
+  url: https://status.strata.io/
+  uptime_target: null
+status_page: https://status.strata.io/
+deprecated_operations: []

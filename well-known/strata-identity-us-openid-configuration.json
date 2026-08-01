@@ -1,0 +1,57 @@
+{
+  "issuer": "https://auth.us-east-2.strata.io",
+  "authorization_endpoint": "",
+  "token_endpoint": "https://auth.us-east-2.strata.io/oauth2/token",
+  "userinfo_endpoint": "",
+  "jwks_uri": "https://auth.us-east-2.strata.io/.well-known/jwks.json",
+  "end_session_endpoint": "",
+  "response_types_supported": [
+    "code",
+    "code id_token",
+    "code id_token token",
+    "code token",
+    "id_token",
+    "id_token token",
+    "token"
+  ],
+  "response_modes_supported": [
+    "query",
+    "fragment",
+    "form_post"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "scopes_supported": [
+    "openid",
+    "profile",
+    "email",
+    "phone",
+    "offline_access"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post"
+  ],
+  "grant_types_supported": [
+    "authorization_code",
+    "refresh_token",
+    "client_credentials",
+    "password",
+    "implicit",
+    "urn:ietf:params:oauth:grant-type:token-exchange"
+  ],
+  "dpop_signing_alg_values_supported": [
+    "ES256",
+    "ES384",
+    "ES512",
+    "RS256",
+    "RS384",
+    "RS512"
+  ],
+  "code_challenge_methods_supported": [
+    "S256"
+  ]
+}
