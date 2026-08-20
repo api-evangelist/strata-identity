@@ -46,6 +46,18 @@ tags:
 - Authorization
 - Single Sign-On
 - IAM
+- SAML
+- OpenID Connect
+- AI Identity
+- Security
+tags_raw:
+- Company
+- Identity
+- Identity Orchestration
+- Authentication
+- Authorization
+- Single Sign-On
+- IAM
 - OAuth
 - SAML
 - OpenID Connect
@@ -61,6 +73,9 @@ apis:
   humanURL: https://docs.strata.io/reference/console/api-clients
   baseURL: https://auth.us-east-2.strata.io
   tags:
+  - Identity
+  - Authentication
+  tags_raw:
   - Identity
   - Authentication
   - OAuth
