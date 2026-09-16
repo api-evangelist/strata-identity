@@ -1,20 +1,16 @@
 aid: strata-identity
 name: Strata Identity
-description: >-
-  Strata Identity is a multi-cloud identity orchestration and agentic AI security
-  company whose Maverics platform lets organizations unify authentication and
-  authorization across multiple clouds, identity providers, and applications, and
-  govern AI agent access at runtime, without rewriting apps or consolidating identity
-  providers. The platform pairs the Maverics Orchestrator, a lightweight identity
-  abstraction layer that routes auth between apps and any IdP (SAML, OIDC, LDAP,
-  Active Directory), with a hosted Maverics Console for visual configuration,
-  policy, and lifecycle management. It adds SSO, MFA, and authorization policy to
-  legacy and modern apps, provides identity continuity during IdP outages, and now
-  secures MCP servers and AI agents through an AI Identity Gateway. The Console
-  exposes a public management API automated with OAuth 2.0 client-credentials
-  clients. Founded by CEO Eric Olden, co-author of the SAML standard and creator of
-  the Identity Query Language (IDQL) and the open-source Hexa project; Strata is now
-  part of Rubrik.
+description: Strata Identity is a multi-cloud identity orchestration and agentic AI security company whose
+  Maverics platform lets organizations unify authentication and authorization across multiple clouds,
+  identity providers, and applications, and govern AI agent access at runtime, without rewriting apps
+  or consolidating identity providers. The platform pairs the Maverics Orchestrator, a lightweight identity
+  abstraction layer that routes auth between apps and any IdP (SAML, OIDC, LDAP, Active Directory), with
+  a hosted Maverics Console for visual configuration, policy, and lifecycle management. It adds SSO, MFA,
+  and authorization policy to legacy and modern apps, provides identity continuity during IdP outages,
+  and now secures MCP servers and AI agents through an AI Identity Gateway. The Console exposes a public
+  management API automated with OAuth 2.0 client-credentials clients. Founded by CEO Eric Olden, co-author
+  of the SAML standard and creator of the Identity Query Language (IDQL) and the open-source Hexa project;
+  Strata is now part of Rubrik.
 url: https://raw.githubusercontent.com/api-evangelist/strata-identity/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -48,7 +44,7 @@ accessModel:
 image: https://www.strata.io/wp-content/uploads/2025/07/Strata_Preview_Agentic.jpg
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-21'
+modified: '2026-09-16'
 tags:
 - Company
 - Identity
@@ -61,6 +57,7 @@ tags:
 - OpenID Connect
 - AI Identity
 - Security
+- Identity Federation
 tags_raw:
 - Company
 - Identity
@@ -74,13 +71,13 @@ tags_raw:
 - OpenID Connect
 - AI Identity
 - Security
+- Identity Federation
 apis:
 - name: Maverics Console Management API
-  description: >-
-    Public management API for the Maverics platform, automated with confidential
-    OAuth 2.0 client-credentials API clients (private_key_jwt / JWT client
-    assertion, ES256). Region-specific auth surfaces are discovered via OpenID
-    Connect discovery documents (US: auth.us-east-2.strata.io, UK: auth.eu-west-2.strata.io).
+  description: 'Public management API for the Maverics platform, automated with confidential OAuth 2.0
+    client-credentials API clients (private_key_jwt / JWT client assertion, ES256). Region-specific auth
+    surfaces are discovered via OpenID Connect discovery documents (US: auth.us-east-2.strata.io, UK:
+    auth.eu-west-2.strata.io).'
   humanURL: https://docs.strata.io/reference/console/api-clients
   baseURL: https://auth.us-east-2.strata.io
   tags:
