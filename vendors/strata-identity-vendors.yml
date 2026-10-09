@@ -1,0 +1,21 @@
+generated: '2026-09-25'
+method: probed
+source: 'reconcile-ptr-only.py: an MCP server the provider serves through a vendor implementation'
+registry: all/0-working/vendors.yml
+vendors:
+- vendor: wordpress
+  area: mcp-hosting
+  host: www.strata.io
+  evidence: mcp:https://www.strata.io/wp-json/mcp/mcp-oauth-server
+  signal: mcp-handshake
+  confidence: high
+  kin_score:
+  - mcp_server
+- vendor: mintlify
+  area: mcp-hosting
+  host: docs.strata.io
+  evidence: mcp:https://docs.strata.io/mcp
+  signal: mcp-handshake
+  confidence: high
+  kin_score:
+  - mcp_server
