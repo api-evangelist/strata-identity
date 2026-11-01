@@ -64,6 +64,107 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Strata Identity is a company surfaced as a portfolio company of menlo-ventures and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Strata Identity is a multi-cloud identity orchestration and agentic AI security company whose Maverics platform lets organizations unify authentication and authorization across multiple clouds, identity providers, and applications, and govern AI agent access at runtime, without rewriting apps or consolidating identity providers. The platform pairs the Maverics Orchestrator, a lightweight identity abstraction layer that routes auth between apps and any IdP (SAML, OIDC, LDAP, Active Directory), with a hosted Maverics Console for visual configuration, policy, and lifecycle management. It adds SSO, MFA, and authorization policy to legacy and modern apps, provides identity continuity during IdP outages, and now secures MCP servers and AI agents through an AI Identity Gateway. The Console exposes a public management API automated with OAuth 2.0 client-credentials clients. Founded by CEO Eric Olden, co-author of the SAML standard and creator of the Identity Query Language (IDQL) and the open-source Hexa project; Strata is now part of Rubrik.
 
-Backed by: menlo-ventures — https://strata.io
+**Areas:** Company · Identity · Identity Orchestration · Authentication · Authorization · SSO · Identity and Access Management · SAML · OpenID Connect · AI Identity · Security · Identity Federation
+
+## Strata Identity on APIs.io
+
+Everything profiled for Strata Identity is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/strata-identity/](https://apis.io/providers/strata-identity/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Maverics Console Management API](https://apis.io/apis/strata-identity/maverics-console-management-api/) — Public management API for the Maverics platform, automated with confidential OAuth 2.0 client-credentials API clients (private_key_jwt / JWT client…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (2)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Moved to /providers/strata-identity/](https://apis.io/servers/strata-identity/strata-identity/)
+- [Moved to /providers/strata-identity/](https://apis.io/servers/strata-identity/strata-identity-2/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Strata Identity Authentication](https://apis.io/security/strata-identity/strata-identity-authentication/)
+- [Strata Identity Domain Security](https://apis.io/security/strata-identity/strata-identity-domain-security/)
+- [Strata Identity Trust Center](https://apis.io/security/strata-identity/strata-identity-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://strata.io)
+- [Documentation](https://docs.strata.io/)
+- [Getting started](https://docs.strata.io/guides/getting-started/quick-start)
+- [API reference](https://docs.strata.io/reference/console/api-clients)
+- [Support](https://www.strata.io/contact/)
+- [Changelog](https://docs.strata.io/changelog)
+- [Blog](https://www.strata.io/blog/)
+- [Security](https://trust.strata.io/)
+- [Compliance](https://trust.strata.io/)
+- [Trust centre](https://trust.strata.io/)
+- [Terms of service](https://www.rubrik.com/legal/terms-of-use)
+- [Privacy policy](https://www.strata.io/privacy-policy/)
+- [GitHub](https://github.com/strata-io)
+- [Status](https://status.strata.io/)
+
+## API Evangelist rating
+
+**Kin Score 37.9** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 44.7 |
+| Developer ergonomics | 64.3 |
+| Access clarity | 36.8 |
+
+**Agent readiness 23.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/strata-identity/](https://apis.io/providers/strata-identity/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Strata Identity: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/strata-identity/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
